@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Dreams</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="intro">
+        <div class="intro-content">
+            <video autoplay muted playsinline id="introVideo">
+            <source src="cutiepatotiee.mp4" type="video/mp4">
+            </video>
+            <div id="introText">Sweet Dreams</div>
+        </div>
+    </div>
+    <div id="home-page" class="page active">
+        <div class="container">
+            <section>
+                <h1>Sweeten your day and chase your dreams..</h1>
+                <h2>Welcome to Sweet Dreams! ⊹ ࣪ ˖🍰🌙₊˚⊹♡ </h2>
+                <p>thank you for stopping by .ᐟ.ᐟ click to know more about our story or shop your favorites ˙ᵕ˙</p>
+                <div class="action-buttons">
+                    <button class="btn btn-purple" onclick="showPage('about-page')">How We Dream ⏾⋆.˚</button>
+                    <button class="btn btn-pink" onclick="showPage('menu-page')">Our Menu 🧸</button>
+                    <button class="btn btn-green" onclick="showPage('socials-page')">Contact Us! ❤︎</button>
+                    <button class="btn btn-yellow" onclick="showPage('order-page')">Order Now! ⋆˙⟡</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="about-page" class="page">
+        <button class="back-btn" onclick="showPage('home-page')">← Back</button>
+        <div class="container">
+            <section>
+                <div class="about-image"></div>
+                <div class="about-content">
+                    <h2>Hi there! I'm Ouie, the heart behind Sweet Dreams!</h2>
+                    <p>Ever since I was young, I've had a big love for baking—mixing batter, sneaking tastes of frosting, and dreaming of having my own little bakery one day. But as I grew older, I slowly lost touch with that passion. For a while, I forgot that my dream was to become a baker.</p>
+                    <p>Now, I've finally found the courage to start small and dream big again—and that's how Sweet Dreams was born! ⏾</p>
+                    <p>Why the name? Well... I sell sweet goodies (of course!), I'm a big dreamer, and I absolutely love to sleep (seriously, naps are my thing ᶻ 𝗓 𐰁).</p>
+                    <p>Sweet Dreams just felt like the perfect name for this cozy little dream of mine. I hope our sweets bring you comfort, joy, and a gentle reminder to keep chasing your dreams too. ⋆˙⟡</p>
+                    <div class="action-buttons">
+                        <button class="btn btn-pink" onclick="showPage('menu-page')">View Our Menu ⋆☾⋆⭒˚｡⋆</button>
+                        <button class="btn btn-yellow" onclick="showPage('order-page')">Order Here!</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="menu-page" class="page">
+        <button class="back-btn" onclick="showPage('home-page')">← Back</button>
+        <div class="container">
+            <section>
+                <div class="menu-header">
+                    <h1>Our Menu ⋆˚꩜｡</h1>
+                </div>
+                <div class="menu-item">
+                    <div class="item-number">01</div>
+                    <div class="menu-item-image1"></div>
+                    <div class="menu-item-details">
+                        <h3>Brookie Monsters</h3>
+                        <div class="menu-item-price">$2.99</div>
+                        <p class="menu-item-desc">Half cookie, half brownie, 100% dreamy! Fudgy brownie meets buttery cookie for gooey, irresistible bites that will rawr into your sweet dream! ૮ ˙Ⱉ˙ ა</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-number">02</div>
+                    <div class="menu-item-image2"></div>
+                    <div class="menu-item-details">
+                        <h4>Ube Dream Tres Leches</h4>
+                        <div class="menu-item-price">$5.50</div>
+                        <p class="menu-item-desc">A soft, fluffy cake made with ube (purple yam) and soaked in three milks—whole, condensed, and evaporated—for a sweet, creamy, melt-in-your-mouth treat. Top it with cheese or coconut flakes for a little extra magic!  ⋆˚꩜｡</p>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn btn-yellow" onclick="showPage('order-page')">Order Now! 🛒</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="socials-page" class="page">
+        <button class="back-btn" onclick="showPage('home-page')">← Back</button>
+        <div class="container">
+            <section>
+                <div class="menu-header">
+                    <h1>Our Socials! 𐔌՞. .՞𐦯</h1>
+                    <p style="text-align: center; color: #87ceeb; margin-top: 10px;">Follow us for a sprinkle of updates, behind-the-scenes bakes, and a dash of special offers! >ᴗ< </p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/sweetdreams.wi/" class="social-btn" target="_blank">Instagram ୨ৎ</a>
+                    <a href="https://www.facebook.com/people/Sweet-Dreams/61581328931732/?fbclid=PAZXh0bgNhZW0CMTEAAaeR2g2PckgTK-SxE0PaH6rHjI_f6AocJCT7OBU-Ax7ZvxbdGoRIzH8e6nlqOg_aem_wb0Qj8jMKdpUCZp91sg5GA" class="social-btn" target="_blank">Facebook ★</a>
+                    <a href="https://www.tiktok.com/@shopsweetdreamsco?lang=en" class="social-btn" target="_blank">Tiktok ˙ᵕ˙</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="order-page" class="page">
+        <button class="back-btn" onclick="showPage('home-page')">← Back</button>
+        <div class="container">
+            <section>
+                <h2 style="text-align: center; color: #6b4e71; margin-bottom: 10px;">Order Form ❀</h2>
+                <p style="text-align: center; color: #87ceeb; margin-bottom: 30px;">Choose whether you'd like to pick up your treats or have them delivered right to your door! ◇₊.</p>
+                <div class="order-form">
+                    <form id="orderForm">
+                        <div class="form-note">
+                            <strong>📝 Note:</strong> Please fill out all required fields. We'll confirm your order shortly!
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryMethod">Delivery Method *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="pickup" name="deliveryMethod" value="pickup" required>
+                                    <label for="pickup" style="margin: 0; font-weight: normal;">I'll Pick It Up ❤︎</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="delivery" name="deliveryMethod" value="delivery" required>
+                                    <label for="delivery" style="margin: 0; font-weight: normal;">Delivery, Please! 🚚</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-note">
+                            <strong>📝 Note: <italic>Eau Claire deliveries</italic></strong> are available on <strong><underlined>Saturdays only</underlined></strong>. <strong><italic>Mondovi deliveries</italic></strong> are available on <strong><underlined>Sundays only</underlined></strong>. Thank you! ˶ᵔ ᵕ ᵔ˶
+                        </div>
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 XXXXXXXXX" required> 
+                        </div>
+                        <div class="form-group" id="addressGroup" style="display: none;">
+                            <label for="address">Delivery Address *</label>
+                            <textarea id="address" name="address" placeholder="Enter your complete delivery address"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>How would you like to pay? *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                <input type="radio" id="paypal" name="paymentMethod" value="PayPal" required>
+                                <label for="paypal" style="margin: 0; font-weight: normal;">PayPal</label>
+                                </div>
+                                <div class="radio-option">
+                                <input type="radio" id="venmo" name="paymentMethod" value="Venmo" required>
+                                <label for="venmo" style="margin: 0; font-weight: normal;">Venmo</label>
+                                </div>
+                            </div>
+                            <div class="form-note" style="margin-top: 10px;">
+                                <strong>📝 Note:</strong> We’re not accepting cash at the moment. ˊᴖˋ But hopefully we’ll have it as an option very soon ♡
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Your Items *</label>
+                            <div class="menu-selector">
+                                <div class="menu-select-item" data-item="brookie" data-price="2.99">
+                                    <div class="menu-select-info">
+                                        <h4>Brookie Monsters 🍪</h4>
+                                        <p>$2.99 each</p>
+                                    </div>
+                                    <div class="menu-select-controls">
+                                        <button type="button" class="qty-btn" onclick="changeQty('brookie', -1)">−</button>
+                                        <span class="qty-display" id="qty-brookie">0</span>
+                                        <button type="button" class="qty-btn" onclick="changeQty('brookie', 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="menu-select-item" data-item="ubeCoconut" data-price="5.50">
+                                    <div class="menu-select-info">
+                                        <h4>Ube Dream Tres Leches with Coconut Flakes 🥥</h4>
+                                        <p>$5.50 each</p>
+                                    </div>
+                                    <div class="menu-select-controls">
+                                        <button type="button" class="qty-btn" onclick="changeQty('ubeCoconut', -1)">−</button>
+                                        <span class="qty-display" id="qty-ubeCoconut">0</span>
+                                        <button type="button" class="qty-btn" onclick="changeQty('ubeCoconut', 1)">+</button>
+                                    </div>
+                                    </div>
+
+                                    <div class="menu-select-item" data-item="ubeCheese" data-price="5.50">
+                                    <div class="menu-select-info">
+                                        <h4>Ube Dream Tres Leches with Cheese 🧀</h4>
+                                        <p>$5.50 each</p>
+                                    </div>
+                                    <div class="menu-select-controls">
+                                        <button type="button" class="qty-btn" onclick="changeQty('ubeCheese', -1)">−</button>
+                                        <span class="qty-display" id="qty-ubeCheese">0</span>
+                                        <button type="button" class="qty-btn" onclick="changeQty('ubeCheese', 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="orderError" style="color: red; font-size: 0.9em; display: none; margin-top: 10px;">Please select at least one item!</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Pick-up/Delivery Date *</label>
+                            <input type="date" id="date" name="date" required onchange="loadTimeSlots()">
+                        </div>
+                        <div class="form-group" id="timeSlotGroup" style="display: none;">
+                            <label>Select Time Slot *</label>
+                            <div class="time-slot-selector" id="timeSlotSelector"></div>
+                            <div id="timeError" style="color: red; font-size: 0.9em; display: none; margin-top: 10px;">Please select a time slot!</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialRequests">Got any special notes for us? 💌</label>
+                            <textarea id="specialRequests" name="specialRequests" placeholder="Let us know if there's anything we should keep in mind. Thank you!"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">⌞Submit Order⌝</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
