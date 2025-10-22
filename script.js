@@ -35,6 +35,8 @@ const deliveryRadio = document.getElementById('delivery');
 const addressGroup = document.getElementById('addressGroup');
 const addressField = document.getElementById('address');
 
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKSjTlLvY0oZp9RhqwLa8W6c-YRN5Ql1M-UUPlMYEf1pAIn7UlgqntMfSxdEJQhfEFdQ/exec';
+
 function toggleAddressField() {
     if (deliveryRadio.checked) {
         addressGroup.style.display = 'block';
@@ -71,14 +73,31 @@ let deliveryArea = '';
 // Fetch booked slots from Google Sheets on page load
 async function fetchBookedSlots() {
     try {
-        const response = await fetch(SCRIPT_URL + '?fetch=booked&callback=handleBookedSlots');
-        const text = await response.text();
-        // Extract JSON from JSONP response
-        const jsonMatch = text.match(/handleBookedSlots\((.*)\)/);
-        if (jsonMatch && jsonMatch[1]) {
-            bookedSlots = JSON.parse(jsonMatch[1]);
-            console.log('Fetched booked slots:', bookedSlots);
-        }
+        console.log('Fetching booked slots from:', SCRIPT_URL + '?fetch=booked');
+        const response = await fetch(SCRIPT_URL + '?fetch=booked&callback=handleBookedSlots', {
+            method: 'GET',
+            mode: 'no-cors'
+        });
+        
+        // Since we're using no-cors, we can't read the response
+        // Instead, let's use a different approach with JSONP
+        
+        // Create script tag for JSONP
+        const script = document.createElement('script');
+        script.src = SCRIPT_URL + '?fetch=booked&callback=handleBookedSlots';
+        document.body.appendChild(script);
+        
+        // Remove script after loading
+        script.onload = () => {
+            console.log('Booked slots script loaded');
+            document.body.removeChild(script);
+        };
+        
+        script.onerror = () => {
+            console.error('Failed to load booked slots');
+            document.body.removeChild(script);
+        };
+        
     } catch (error) {
         console.error('Error fetching booked slots:', error);
         bookedSlots = {};
@@ -191,16 +210,15 @@ function loadTimeSlots() {
             );
             deliveryArea = scheduleConfig.delivery.saturday.area;
             deliveryFee = scheduleConfig.delivery.saturday.fee;
-            dayLabel = 'Delivery - ' + deliveryArea + ' Area (+ $' + deliveryFee.toFixed(2) + ')';
+            dayLabel = 'Delivery - ' + deliveryArea + ' Area (+
 
 function selectTimeSlot(time, element, date) {
     document.querySelectorAll('.time-slot').forEach(slot => slot.classList.remove('selected'));
     element.classList.add('selected');
     selectedTimeSlot = time;
     document.getElementById('timeError').style.display = 'none';
+    console.log('Selected time slot:', time);
 }
-
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKSjTlLvY0oZp9RhqwLa8W6c-YRN5Ql1M-UUPlMYEf1pAIn7UlgqntMfSxdEJQhfEFdQ/exec';
 
 function showLoadingVideo() {
     const loadingOverlay = document.createElement('div');
@@ -783,7 +801,7 @@ window.addEventListener('load', () => {
             );
             deliveryArea = scheduleConfig.delivery.sunday.area;
             deliveryFee = scheduleConfig.delivery.sunday.fee;
-            dayLabel = 'Delivery - ' + deliveryArea + ' Area (+ $' + deliveryFee + ')';
+            dayLabel = 'Delivery - ' + deliveryArea + ' Area (+
 
 function selectTimeSlot(time, element, date) {
     document.querySelectorAll('.time-slot').forEach(slot => slot.classList.remove('selected'));
@@ -1406,7 +1424,7 @@ function selectTimeSlot(time, element, date) {
     document.getElementById('timeError').style.display = 'none';
 }
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxvN2FEqqUpPtRigM4izzbGhrVjFguD9NhCuLJBkowZOyy1Fk8E1Vik8dv-xxhPDR1W/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKSjTlLvY0oZp9RhqwLa8W6c-YRN5Ql1M-UUPlMYEf1pAIn7UlgqntMfSxdEJQhfEFdQ/exec';
 
 function showLoadingVideo() {
     const loadingOverlay = document.createElement('div');
@@ -1975,4 +1993,3 @@ window.addEventListener('load', () => {
     }, 1500);
   });
 });
-
