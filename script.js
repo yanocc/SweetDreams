@@ -1406,7 +1406,7 @@ function selectTimeSlot(time, element, date) {
     document.getElementById('timeError').style.display = 'none';
 }
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKSjTlLvY0oZp9RhqwLa8W6c-YRN5Ql1M-UUPlMYEf1pAIn7UlgqntMfSxdEJQhfEFdQ/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxvN2FEqqUpPtRigM4izzbGhrVjFguD9NhCuLJBkowZOyy1Fk8E1Vik8dv-xxhPDR1W/exec';
 
 function showLoadingVideo() {
     const loadingOverlay = document.createElement('div');
@@ -1975,3 +1975,4 @@ window.addEventListener('load', () => {
     }, 1500);
   });
 });
+
