@@ -35,7 +35,7 @@ const deliveryRadio = document.getElementById('delivery');
 const addressGroup = document.getElementById('addressGroup');
 const addressField = document.getElementById('address');
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKSjTlLvY0oZp9RhqwLa8W6c-YRN5Ql1M-UUPlMYEf1pAIn7UlgqntMfSxdEJQhfEFdQ/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxvN2FEqqUpPtRigM4izzbGhrVjFguD9NhCuLJBkowZOyy1Fk8E1Vik8dv-xxhPDR1W/exec';
 
 function toggleAddressField() {
     if (deliveryRadio.checked) {
@@ -839,3 +839,4 @@ window.addEventListener('load', () => {
         }, 1500);
     });
 });
+
